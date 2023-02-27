@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
+
+:root {
+  --color-primary: #9099A2;
+  --color-secondary: #262626;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 1000vh;
+  background-color: var(--color-secondary);
+}
+
+.container {
+  padding: 0 50px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 100;
+}
+
+.colored {
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 15px 0 rgba(255, 255, 255, .2);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .logo-box {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.nav .logo-box::before {
+  content: "TIA NIANDARI";
+  position: absolute;
+  color: #000;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  right: 0;
+}
+
+.nav a {
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.nav .nav-list{
+  display : flex;
+}
+
+.nav-list .nav-item {
+  list-style: none;
+  margin: 0 .5rem;
+  color: var(--color-primary);
+}
+
+.nav-list .nav-item .nav-link {
+  border: 2px solid transparent;
+  padding: 10px;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  font-weight: 600;
+}
+
+.nav-list .nav-item .nav-link:hover {
+  border: 2px solid var(--color-primary);
+  color: #262626;
+  background-color: var(--color-primary);
+}
+
+.bg-text {
+  background-image: url("img/img-portofolio.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.bg-text .box-text {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .7);
+  color: var(--color-primary);
+}
+
+.box-text #text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform .5s ease-in-out;
+  -webkit-transition: transform .5s ease-in-out;
+  -moz-transition: transform .5s ease-in-out;
+  -ms-transition: transform .5s ease-in-out;
+  -o-transition: transform .5s ease-in-out;
+}
+
+.box-text #text h1 {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.box-text #text .btn {
+  position: relative;
+  cursor: pointer;
+  margin-top: 5px;
+  padding: 5px 30px;
+  background-color: var(--color-primary);
+  font-weight: 600;
+  font-size: 20px;
+  border-radius:25px;
+  color: #262626;
+  -webkit-border-radius:25px;
+  -moz-border-radius:25px;
+  -ms-border-radius:25px;
+  -o-border-radius:25px;
+  box-shadow: 5px 5px rgba(0, 0, 0, .7);
+  transition: transform .3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  -moz-transition: transform .3s ease-in-out;
+  -ms-transition: transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+}
+
+.box-text .btn:hover {
+  transform: scale(.9);
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  -ms-transform: scale(.9);
+  -o-transform: scale(.9);
+}
+
+/* popup */
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: var(--color-primary) !important;
+  color: var(--color-secondary) !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 20px !important;
+  font-family: 'Lato', sans-serif !important;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  transition: all .3s ease-in-out !important;
+  -webkit-transition: all .3s ease-in-out !important;
+  -moz-transition: all .3s ease-in-out !important;
+  -ms-transition: all .3s ease-in-out !important;
+  -o-transition: all .3s ease-in-out !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm:hover {
+  border: 0 !important;
+  transform: scale(.9) !important;
+  -webkit-transform: scale(.9) !important;
+  -moz-transform: scale(.9) !important;
+  -ms-transform: scale(.9) !important;
+  -o-transform: scale(.9) !important;
+}
+
+.swal2-popup .swal2-title {
+  font-size: 30px !important;
+}
+
+.swal-wide {
+  width: auto !important;
+}
