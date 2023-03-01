@@ -73,13 +73,13 @@ a {
 
 .nav-list .nav-item {
   list-style: none;
-  margin: 0 .5rem;
   color: var(--color-primary);
 }
 
 .nav-list .nav-item .nav-link {
   border: 2px solid transparent;
   padding: 10px;
+  margin: 0 .5rem;
   transition: all .3s ease-in-out;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -171,16 +171,17 @@ a {
   background-color: var(--color-primary) !important;
   color: var(--color-secondary) !important;
   outline: none !important;
-  border: none !important;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 20px;
+  border: 2px solid var(--color-secondary) !important;
+  box-shadow: 5px 5px rgba(0, 0, 0, .7) !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
   padding: 5px 20px !important;
   font-family: 'Lato', sans-serif !important;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
+  -webkit-border-radius: 25px !important;
+  -moz-border-radius: 25px !important;
+  -ms-border-radius: 25px !important;
+  -o-border-radius: 25px !important;
   transition: all .3s ease-in-out !important;
   -webkit-transition: all .3s ease-in-out !important;
   -moz-transition: all .3s ease-in-out !important;
@@ -189,7 +190,6 @@ a {
 }
 
 .swal2-popup .swal2-styled.swal2-confirm:hover {
-  border: 0 !important;
   transform: scale(.9) !important;
   -webkit-transform: scale(.9) !important;
   -moz-transform: scale(.9) !important;
@@ -203,4 +203,68 @@ a {
 
 .swal-wide {
   width: auto !important;
+  background: var(--color-primary) !important;
+  box-shadow: 5px 5px rgba(100, 100, 100, .7);
+  color: var(--color-secondary) !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .nav .logo-box {
+    font-size: 20px;
+  }
+
+  .nav-list .nav-item .nav-link {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .box-text #text h1 {
+    font-size: 30px;
+  }
+
+  .box-text #text .btn {
+    font-size: 15px;
+    padding: 5px 20px;
+  }
+
+  .swal2-popup .swal2-title {
+    font-size: 20px !important;
+  }
+
+  .swal2-popup .swal2-styled.swal2-confirm {
+    font-size: 15px !important;
+    padding: 5px 10px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: .5rem 0;
+    padding-bottom: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav .logo-box {
+    margin-bottom: 1rem;
+  }
+
+  .nav-list .nav-item .nav-link {
+    margin: 0 .3rem;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .box-text #text h1 {
+    font-size: 20px;
+  }
+
+  .box-text #text .btn {
+    font-size: 14px;
+  }
 }
