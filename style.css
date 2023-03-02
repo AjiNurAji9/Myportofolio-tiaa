@@ -1,10 +1,14 @@
+/* font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
 
+/* Variabel */
 :root {
   --color-primary: #9099A2;
   --color-secondary: #262626;
+  --color-white: #d1d5db;
 }
 
+/* Global styling */
 * {
   padding: 0;
   margin: 0;
@@ -16,17 +20,21 @@
 body {
   height: 1000vh;
   background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 .container {
-  padding: 0 50px;
+  padding: 5rem 1rem;
 }
 
+
+/* Header */
 header {
   position: fixed;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   z-index: 100;
+  transition: background-color .3s ease-in-out;
 }
 
 .colored {
@@ -116,7 +124,7 @@ a {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, .7);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .box-text #text {
@@ -141,6 +149,7 @@ a {
   cursor: pointer;
   margin-top: 5px;
   padding: 5px 30px;
+  border: 2px solid var(--color-secondary);
   background-color: var(--color-primary);
   font-weight: 600;
   font-size: 20px;
@@ -254,10 +263,6 @@ a {
 
   .nav-list .nav-item .nav-link {
     margin: 0 .3rem;
-  }
-
-  .container {
-    padding: 0;
   }
 
   .box-text #text h1 {
