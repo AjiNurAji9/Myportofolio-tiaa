@@ -5,7 +5,7 @@
 :root {
   --color-primary: #9099A2;
   --color-secondary: #262626;
-  --color-third: #fb923c;
+  --color-third: #f6931d;
 }
 
 /* Global styling */
@@ -18,18 +18,27 @@
 }
 
 body {
-  height: 1000vh;
+  font-size: 25px;
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }
 
 .container {
-  padding: 5rem 1rem;
+  padding: 0 1rem;
+  padding-top: 6rem;
 }
 
 .title {
-  font-size: 25px;
+  font-size: 30px;
+  text-transform: uppercase;
   color: var(--color-third);
+  padding: 10px 0;
+  margin: 40px 0;
+  border-bottom: 3px solid var(--color-third);
+}
+
+.title span {
+  color: var(--color-primary);
 }
 
 
@@ -193,6 +202,36 @@ a {
   -o-transform: scale(.9);
 }
 
+/* about */
+#about .content {
+  display: flex;
+  flex-direction: row;
+}
+
+#about .content .image {
+  max-width: 350px;
+}
+
+#about .content .description {
+  margin: 0 20px;
+}
+
+#about .content .image img {
+  width: 100%;
+  border: 5px solid var(--color-third);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#about .content .description p {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
 /* popup */
 .swal2-popup .swal2-styled.swal2-confirm {
   background-color: var(--color-primary) !important;
@@ -236,7 +275,15 @@ a {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
+  body {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
   .nav .logo-box {
     font-size: 20px;
   }
@@ -266,9 +313,17 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
   header {
     padding: .5rem 0;
     padding-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 20px;
   }
 
   .nav {
@@ -291,9 +346,16 @@ a {
   .box-text #text .btn {
     font-size: 14px;
   }
-  
-  .content .right p {
-    margin-bottom: 10px;
-    text-align: justify;
+
+  #about .content {
+    flex-direction: column;
+  }
+
+  #about .content .image {
+    max-width: 100%;
+  }
+
+  #about .content .description {
+    margin: 20px 0;
   }
 }
