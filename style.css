@@ -5,7 +5,7 @@
 :root {
   --color-primary: #9099A2;
   --color-secondary: #262626;
-  --color-white: #d1d5db;
+  --color-third: #fb923c;
 }
 
 /* Global styling */
@@ -20,11 +20,16 @@
 body {
   height: 1000vh;
   background-color: var(--color-secondary);
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .container {
   padding: 5rem 1rem;
+}
+
+.title {
+  font-size: 25px;
+  color: var(--color-third);
 }
 
 
@@ -42,9 +47,17 @@ header {
   box-shadow: 0 0 15px 0 rgba(255, 255, 255, .2);
 }
 
+.colored .nav a {
+  color: var(--color-third);
+}
+
+.colored .nav-list .nav-item .nav-link:hover {
+  background-color: var(--color-third);
+  border: 2px solid var(--color-third);
+}
+
 a {
   text-decoration: none;
-  color: white;
 }
 
 .nav {
@@ -71,6 +84,11 @@ a {
 }
 
 .nav a {
+  transition: color .3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  -moz-transition: color .3s ease-in-out;
+  -ms-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   font-size: 20px;
   color: var(--color-primary);
 }
@@ -88,12 +106,12 @@ a {
   border: 2px solid transparent;
   padding: 10px;
   margin: 0 .5rem;
-  transition: all .3s ease-in-out;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
@@ -123,7 +141,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, .5);
   color: var(--color-white);
 }
 
@@ -159,7 +177,7 @@ a {
   -moz-border-radius:25px;
   -ms-border-radius:25px;
   -o-border-radius:25px;
-  box-shadow: 5px 5px rgba(0, 0, 0, .7);
+  box-shadow: 3px 3px rgba(0, 0, 0, .7);
   transition: transform .3s ease-in-out;
   -webkit-transition: transform .3s ease-in-out;
   -moz-transition: transform .3s ease-in-out;
@@ -181,7 +199,7 @@ a {
   color: var(--color-secondary) !important;
   outline: none !important;
   border: 2px solid var(--color-secondary) !important;
-  box-shadow: 5px 5px rgba(0, 0, 0, .7) !important;
+  box-shadow: 3px 3px rgba(0, 0, 0, .7) !important;
   border-radius: 25px !important;
   font-weight: 600 !important;
   font-size: 20px !important;
@@ -267,9 +285,15 @@ a {
 
   .box-text #text h1 {
     font-size: 20px;
+    font-weight: 900 !important;
   }
 
   .box-text #text .btn {
     font-size: 14px;
+  }
+  
+  .content .right p {
+    margin-bottom: 10px;
+    text-align: justify;
   }
 }

@@ -8,7 +8,7 @@ window.onscroll = () => {
     navbar.classList.remove("colored");
   }
 
-  if (window.scrollY > 50) {
+  if (window.scrollY > 100) {
     text.style.transform = "scale(0)";
   } else {
     text.style.transform = "scale(1)";
