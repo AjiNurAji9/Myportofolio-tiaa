@@ -1,11 +1,15 @@
 const navbar = document.getElementById("navbar");
 const text = document.getElementById("text");
+const logo = document.getElementById("logo");
+
 window.onscroll = () => {
 
   if (window.scrollY >= 250) {
     navbar.classList.add("colored");
+    logo.classList.add("hidden");
   } else {
     navbar.classList.remove("colored");
+    logo.classList.remove("hidden");
   }
 
   if (window.scrollY > 100) {
