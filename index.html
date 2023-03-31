@@ -10,9 +10,10 @@
       src="https://kit.fontawesome.com/067f89a637.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
-    <header id="navbar">
+    <header id="navbar" data-aos="fade-down">
       <nav class="nav">
         <a href="#" class="logo-box" id="logo"> TIA NIANDARI </a>
         <ul class="nav-list">
@@ -33,7 +34,7 @@
     <section id="home">
       <div class="bg-text">
         <div class="box-text" id="box-text">
-          <div id="text">
+          <div id="text" data-aos="zoom-in">
             <h1>WELCOME TO Myportofolio</h1>
             <button class="btn" onclick="pesan()">Klik</button>
           </div>
@@ -47,11 +48,11 @@
       <div class="container">
         <h1 class="title">About <span>me</span></h1>
         <div class="content">
-          <div class="image">
+          <div class="image" data-aos="fade-right" data-aos-offset="250" data-aos-easing="ease-in-out">
             <img src="img/tiaa.jpg" alt="" />
           </div>
 
-          <div class="description">
+          <div class="description" data-aos="fade-left" data-aos-offset="250" data-aos-delay="500">
             <h4>Hi, gue Tiaa.</h4>
             <p>
               Gue itu orangnya humble, tidak suka bertele-tele maunya to the
@@ -79,7 +80,7 @@
       <div class="container">
         <h1 class="title">Contact</h1>
         <div class="my-contact">
-          <div class="me">
+          <div class="me" data-aos="flip-left">
             <div class="social">
               <a href="https://instagram.com/tynndri_"
                 ><i class="fa-brands fa-instagram"></i
@@ -94,7 +95,7 @@
               <p class="alamat">Dusun manis, Jatimulya <span>Kuningan</span></p>
             </div>
           </div>
-          <div class="contact-me">
+          <div class="contact-me" data-aos="flip-right" data-aos-delay="500">
             <form action="" method="post">
               <div class="form-group">
                 <input
@@ -151,5 +152,9 @@
     <!-- footer -->
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
