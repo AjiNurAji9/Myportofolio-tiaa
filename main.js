@@ -22,7 +22,11 @@ window.onscroll = () => {
 function pesan() {
   Swal.fire({
     title: "Kepo ya?",
-    confirmButtonText: "<a href='#about'>Iya</a>",
+    confirmButtonText: "Iya",
     customClass: "swal-wide"
+  }).then((result) => {
+    if (result.value) {
+      window.location.href = "#about";
+    }
   })
 }
