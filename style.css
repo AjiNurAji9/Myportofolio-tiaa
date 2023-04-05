@@ -516,6 +516,7 @@ a {
     height: 100%;
   }
 
+  #contact .my-contact .info p,
   .copyright p {
     font-size: 15px;
   }
