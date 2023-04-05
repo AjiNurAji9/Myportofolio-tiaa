@@ -515,6 +515,10 @@ a {
   #about .content .image img {
     height: 100%;
   }
+
+  .copyright p {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 715px) {
